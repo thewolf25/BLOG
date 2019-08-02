@@ -1,0 +1,22 @@
+<div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <form [formGroup]='postForm' (ngSubmit)='onSubmitForm()'>
+            <div class="form-group">
+                <label for="title"> Title</label>
+                <input type="text" id="title" formControlName='title' class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="content"> content</label>
+                <input type="text" id="content" formControlName='content' class="form-control">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" [disabled]='postForm.invalid'>envoyer</button> 
+                
+            </div>
+            
+        </form>
+        <p class="text-danger" >{{errorMesage}}</p>
+        <p class="text-success">{{successMessage}}</p>
+    
+        </div>
+    </div>
